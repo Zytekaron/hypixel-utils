@@ -84,7 +84,7 @@ async function programMembers() {
 
     const sorted = data.sort(combine(
         byRank(-1),
-        byUsername(),
+        byWeeklyXP(),
     ));
 
     // Format 1

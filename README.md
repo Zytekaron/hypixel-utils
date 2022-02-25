@@ -102,8 +102,8 @@ after a long period of time) to ensure usernames of guild members are up-to-date
 
 ### Sorting Members
 
-By default, members are sorted by their rank, then by their weekly guild xp contribution.
-You can change this by modifying the `sorted` constant in `function programMembers`, and
+By default, members are sorted by their guild rank, then by their weekly gexp contribution.
+You can change this by modifying the `sorted` constant in `function programMembers()`, and
 calling these: `byRank` `byJoined` `byDailyXP` `byWeeklyXP` `byChallenges` `byUsername`.
 You must call these functions when passing them into the `combine` function. By default,
 these functions sort in ascending order, but you can pass in `-1` to reverse it.
@@ -120,7 +120,7 @@ const sorted = data.sort(combine(
 // high ranks first, high usernames first (z-a)
 const sorted = data.sort(combine(
     byRank(-1),
-    byUsername(),
+    byUsername(-1),
 ));
 ```
 
