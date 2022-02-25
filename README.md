@@ -127,8 +127,9 @@ const sorted = data.sort(combine(
 ## TODO
 
 - Ability to sift through user data with the program
+- Ability to set multiple defaults for users and guilds
 - Commands to update all existing data files - `update-guilds` `update-users` `update-all`
 
 ## License
 
-hypixel-utils is licensed under the [MIT Licence](./LICENSE)
+**hypixel-utils** is licensed under the [MIT Licence](./LICENSE)

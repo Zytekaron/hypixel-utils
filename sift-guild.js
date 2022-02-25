@@ -91,9 +91,8 @@ async function programMembers() {
     const pad = '\t';
     if (statsMode == '1') {
         for (const { uuid, rank, joined, username, challenges, dailyGuildXP, weeklyGuildXP } of sorted) {
-            const challengesPad = ' '.repeat(3 - challenges.toString().length);
-            const dailyXPPad = ' '.repeat(5 - dailyGuildXP.toString().length);
-            const weeklyXPPad = ' '.repeat(6 - weeklyGuildXP.toString().length);
+            const challengesPad = ' '.repeat(8 - challenges.toString().length);
+            const dailyXPPad = ' '.repeat(8 - dailyGuildXP.toString().length);
 
             const joinDate = moment(joined).format('L');
             const joinTime = moment(joined).fromNow()
@@ -110,7 +109,7 @@ async function programMembers() {
                 'Join Time:', joinTime, pad,
                 'Quests:', challenges, challengesPad, pad,
                 'Daily XP:', dailyGuildXP, dailyXPPad, pad,
-                'Weekly XP:', weeklyGuildXP, weeklyXPPad, pad,
+                'Weekly XP:', weeklyGuildXP
             );
         }
     }
